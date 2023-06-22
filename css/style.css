@@ -1,5 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@200;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@200;300;400;700&display=swap");
 
+:root {
+  --text-color: #000;
+  --primary-color: #f2f0df;
+}
 * {
   margin: 0;
   box-sizing: border-box;
@@ -34,10 +38,110 @@ nav {
   margin: 0;
 }
 .navbar ul li a {
-  color: #000000;
+  color: var(--text-color);
   font-size: 1.6rem;
   font-weight: 500;
   text-decoration: none;
   text-transform: uppercase;
 }
 /* star main section */
+.main-hero {
+  display: flex;
+  gap: 8em;
+  margin-top: 4rem;
+}
+.left-col {
+  width: 45%;
+}
+.right-col {
+  flex-grow: 1;
+}
+h1 {
+  font-size: 5.2rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+.subhead {
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-top: 2rem;
+}
+.cta-btns {
+  display: flex;
+  margin: 5em 0;
+  gap: 2rem;
+}
+.primary-cta {
+  color: var(--text-color);
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 158%;
+  font-family: "poppins", sans-serif;
+  text-decoration: none;
+  background: var(--primary-color);
+  padding: 1.4rem 2.5rem;
+  border-radius: 1.9rem;
+}
+.cta-btns .scondary-cta {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+}
+.cta-btns .scondary-cta svg {
+  width: 2rem;
+}
+/*start news section*/
+.news {
+  display: flex;
+  gap: 5.3rem;
+  border: 0.1rem solid var(--text-color);
+  border-radius: 1.9rem;
+  padding: 4.2rem 5rem;
+}
+.news .employ {
+  font-size: 3.3rem;
+}
+.news .details {
+  font-size: 1.6rem;
+  line-height: 158%;
+}
+/*start card section*/
+.right-col {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 2.9em;
+  grid-template-areas:
+    "left ."
+    "left .";
+}
+.card {
+  display: flex;
+  align-items: end;
+  padding: 1.6rem;
+  border-radius: 1.9rem;
+  background: #ffd5d5;
+}
+.card-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 2rem 3rem;
+  border-radius: 1.9rem;
+  width: 100%;
+}
+.card-details a {
+  color: var(--text-color);
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+.product-price {
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+.card1 {
+  grid-area: left;
+}
